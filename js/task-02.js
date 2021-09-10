@@ -12,5 +12,5 @@ ingredients.forEach(element => {
   elementEl.textContent = `${element}`
   console.log(elementEl);
   const listEl = document.querySelector('#ingredients');
-listEl.appendChild(elementEl);
+listEl.append(elementEl);
 })
