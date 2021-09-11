@@ -7,10 +7,11 @@ const ingredients = [
   'Приправы',
 ];
 
-ingredients.forEach(element => {
-  const elementEl = document.createElement('li');
-  elementEl.textContent = `${element}`
-  console.log(elementEl);
-  const listEl = document.querySelector('#ingredients');
-listEl.append(elementEl);
-})
+
+const listEl = document.querySelector('#ingredients');
+const elements = ingredients.reduce((acc, element) => acc + `<li>${element}</li>`, '');
+
+listEl.insertAdjacentHTML('beforeend', elements);
+
+
+
